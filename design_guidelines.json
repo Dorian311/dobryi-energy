@@ -1,0 +1,129 @@
+{
+  "theme": "dark",
+  "brand_identity": {
+    "name": "Dobryi Energy",
+    "description": "Energy transition expert (PV, IRVE, maintenance, security) for Agricultural, Industrial, and Public sectors in France. Genuinely award-worthy, luxury-industrial aesthetic.",
+    "emotional_archetype": "Swiss Brutalist meets Luxury Architecture",
+    "vibe": "Authority, Precision, High-end, Cinematic, Trustworthy",
+    "core_concept": "The intersection of raw industrial power and refined, net-zero opulence."
+  },
+  "typography": {
+    "strategy": "Extreme font pairing (Massive Headings vs Small Technical Body Text) to create high visual tension.",
+    "primary_heading": {
+      "font_family": "Playfair Display",
+      "classes": "font-serif tracking-tight",
+      "usage": "H1, large manifesto numbers, editorial statements. Used for high-end luxury feel."
+    },
+    "secondary_heading": {
+      "font_family": "Clash Display",
+      "classes": "font-sans uppercase tracking-[0.1em]",
+      "usage": "Subtitles, Overlines, structural headings, button texts."
+    },
+    "body": {
+      "font_family": "Manrope",
+      "classes": "font-sans leading-relaxed tracking-wide",
+      "usage": "Paragraphs, forms, technical data, and UI elements."
+    },
+    "mono": {
+      "font_family": "JetBrains Mono",
+      "classes": "font-mono uppercase text-xs tracking-widest",
+      "usage": "Data points, chapter numbers (01/), certifications, timestamps."
+    },
+    "install_instructions": "Add Google Fonts imports to index.css or use next/font equivalents: Playfair Display, Manrope, JetBrains Mono. (Alternatively use standard serif/mono if unable to import, but apply tight/wide tracking rules)."
+  },
+  "colors": {
+    "background": {
+      "primary": "#040914",
+      "secondary": "#0A1128",
+      "tertiary": "#0F1A3B"
+    },
+    "text": {
+      "primary": "#F4F4F0",
+      "secondary": "#8F9BB3",
+      "dark_on_light": "#040914"
+    },
+    "brand": {
+      "emerald": "#00E599",
+      "solar_yellow": "#FFD600",
+      "bleu_nuit": "#040914",
+      "blanc_casse": "#F4F4F0"
+    },
+    "accents": {
+      "border": "rgba(244, 244, 240, 0.1)",
+      "glass": "rgba(4, 9, 20, 0.6)"
+    },
+    "rules": "NO generic full-screen gradients. Use deep solid colors. Accent colors (Emerald, Yellow) must be used sparingly for tension, hover states, or technical highlights."
+  },
+  "visual_enhancers": {
+    "glassmorphism": "Use backdrop-blur-xl bg-[#040914]/60 for the sticky header and floating WhatsApp pill. Add a 1px border of white/10.",
+    "textures": "Apply a subtle noise/grain overlay fixed to the screen to kill the 'digital flatness'.",
+    "clipped_frames": "Apply CSS clip-path to images to give them structural, architectural edges. Example: clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);",
+    "borders": "Expose the skeleton. Use 1px subtle borders (border-white/10) to separate grid cells."
+  },
+  "layouts_and_grids": {
+    "global_spacing": "Generous spacing. Use py-24 or py-32 for section padding. Container should be wide but have max-w-[1440px] bounds with px-6 md:px-12.",
+    "hero": "Full height (min-h-screen). Intense, bold layout. Bottom-aligned text or heavily asymmetric. Do NOT center everything.",
+    "manifesto_section": "Numbered chapters (01/ 02/ 03/). Massive padding. Left-aligned numbers with deep indentation for text.",
+    "solutions_bento": "Tetris Grid. grid-cols-1 md:grid-cols-12 gap-6 or gap-8. Make cards span differently (e.g., col-span-8, col-span-4). No boring equal squares.",
+    "realisations_gallery": "Spotlight photography treatment. Dark background, images have sharp clipped corners, on hover they go from grayscale to full color."
+  },
+  "motion_and_interactions": {
+    "libraries": ["framer-motion", "lenis", "react-fast-marquee"],
+    "hero_reveal": "Kinetic masked line-by-line reveal for H1. Wrap each line in an overflow-hidden div, animate child y from 100% to 0 with framer-motion.",
+    "scroll_momentum": "MANDATORY: Implement Lenis smooth scrolling for premium feel.",
+    "hover_craft": "Cards: subtle scale-up of internal image, arrow icon slide-out. Buttons: Fill sweep or border tracing effects.",
+    "parallax": "Use framer-motion useScroll to slightly translate the Y position of background images or floating elements in the hero."
+  },
+  "components_strategy": {
+    "header": "Sticky, glassmorphism. Left: Logo, Center: Nav links, Right: 'Demander un devis' button. Do NOT hide nav on desktop.",
+    "marquee": "Slow editorial marquee using react-fast-marquee. Text-6xl or 8xl, transparent text with 1px stroke (text-transparent [-webkit-text-stroke:1px_#F4F4F0]).",
+    "trust_bar": "Animated counters for '10 ans de garantie', 'QualiPV 500 HTF', 'RGE Qualibat'. Monospaced fonts.",
+    "floating_action": "Floating WhatsApp pill on bottom right. Emerald green or Solar Yellow, glassmorphism edge.",
+    "devis_form": "Multi-step feel but elegant. Use raw HTML inputs styled brutally: border-b only, no side borders, massive padding. Focus state highlights border in Emerald Green."
+  },
+  "image_urls": {
+    "hero_abstract": {
+      "url": "https://images.pexels.com/photos/29407508/pexels-photo-29407508.jpeg",
+      "description": "Abstract view of a modern solar panel structure. Use in hero with dark overlay."
+    },
+    "architecture_glass": {
+      "url": "https://images.pexels.com/photos/34347028/pexels-photo-34347028.jpeg",
+      "description": "Modern glass building for 'A propos' or 'Tertiaire' sector."
+    },
+    "irve_charging": {
+      "url": "https://images.pexels.com/photos/33508509/pexels-photo-33508509.jpeg",
+      "description": "Sleek EV charging station for the IRVE solution card."
+    },
+    "security_workers": {
+      "url": "https://images.pexels.com/photos/8961034/pexels-photo-8961034.jpeg",
+      "description": "Construction workers for the 'Securite chantier' and Maintenance solutions."
+    },
+    "agriculture_drones": {
+      "url": "https://images.pexels.com/photos/34182412/pexels-photo-34182412.jpeg",
+      "description": "Aerial drones over fields for the 'Agricole' sector background."
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure all text over images uses proper overlays. The background is very dark, so white text will pop.",
+    "test_ids": "Include data-testid on all interactive elements, e.g., data-testid='hero-cta', data-testid='nav-link-solutions'."
+  },
+  "instructions_to_main_agent": [
+    "Install required dependencies: yarn add framer-motion @studio-freight/react-lenis react-fast-marquee lucide-react sonner",
+    "Configure Tailwind for the custom colors, font families, and extend borders/clip-paths.",
+    "Set up Lenis in the root App.js layout for smooth scrolling.",
+    "Implement the masked text reveal in the Hero section using framer-motion (overflow: hidden on parent, y: 100% -> 0 on child).",
+    "Use pure HTML/Tailwind for the marketing layouts to allow extreme asymmetry. Do NOT rely heavily on standard Shadcn cards; build custom bento boxes.",
+    "The Contact Form should look like a high-end editorial form (border-bottom inputs, no backgrounds, large text).",
+    "For the floating WhatsApp button, ensure it has a high z-index and backdrop blur.",
+    "All text is in French as requested."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Create depth through layered design elements with z-index hierarchy and glassmorphism.",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "NEVER use placeholder URLs or AI assistant Emoji characters for icons."
+  ]
+}
