@@ -17,21 +17,24 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        // Dobryi — Prism palette
+        // Dobryi — palette professionnelle "Champagne & Indigo"
         nuit: {
-          DEFAULT: "#05060B",
-          800: "#0A0C15",
-          700: "#111426",
+          DEFAULT: "#0C0A09",
+          800: "#1C1917",
+          700: "#292524",
         },
-        // primary accent (kept name emerald-brand for backwards compat — now Cyan électrique)
-        emerald: { brand: "#22D3EE" },
-        cyan: { brand: "#22D3EE" },
-        // secondary CTA accent (kept name solar for backwards compat — now Violet profond)
-        solar: { DEFAULT: "#8B5CF6" },
-        violet: { brand: "#8B5CF6" },
-        eco: { brand: "#34D399" },
-        casse: "#F4F4F0",
-        muted2: "#8B94B5",
+        // Primary accent (aliases kept for backwards compat)
+        champagne: { DEFAULT: "#14776B", light: "#1E9A8B", dark: "#0E5A50" },
+        emerald: { brand: "#14776B" }, // alias -> petrol
+        cyan: { brand: "#14776B" }, // alias -> petrol
+        // Secondary accent
+        indigo: { brand: "#1E3A8A" },
+        solar: { DEFAULT: "#1E3A8A" }, // alias -> deep navy
+        violet: { brand: "#1E3A8A" }, // alias
+        // Sparse eco
+        eco: { brand: "#059669" },
+        casse: "#F5F5F4",
+        muted2: "#78716C",
       },
       fontFamily: {
         serif: ["'Noto Kufi Arabic'", "system-ui", "sans-serif"],

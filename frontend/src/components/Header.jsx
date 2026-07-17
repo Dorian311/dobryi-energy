@@ -1,7 +1,7 @@
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const NAV = [
   { to: "/solutions", label: "Solutions" },
@@ -26,60 +26,82 @@ export default function Header() {
 
   return (
     <>
-      {/* Floating central Devis pill — always visible */}
-      <motion.div
+      <motion.header
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-        className="fixed top-4 left-1/2 -translate-x-1/2 z-50"
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled
+            ? "bg-nuit/80 backdrop-blur-xl border-b border-white/10"
+            : "bg-gradient-to-b from-nuit/70 to-transparent border-b border-transparent"
+        }`}
+        data-testid="site-header"
       >
-        <Link
-          to="/contact"
-          data-testid="header-cta-devis"
-          className="btn-pill bg-nuit/80 backdrop-blur-xl border border-white/15 text-casse hover:bg-cyan-brand hover:text-nuit hover:border-cyan-brand"
-        >
-          Obtenir une étude gratuite
-        </Link>
-      </motion.div>
+        <div className="container-x h-16 md:h-20 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-3" data-testid="header-logo">
+            <span className="inline-flex h-8 w-8 items-center justify-center border border-champagne/50 rounded-sm">
+              <span className="text-[10px] font-bold text-champagne">DE</span>
+            </span>
+            <span className="hidden sm:block">
+              <div className="text-[9px] font-semibold tracking-[0.3em] text-muted2 uppercase leading-none">
+                Dobryi
+              </div>
+              <div className="text-[15px] font-semibold text-casse tracking-tight mt-0.5 leading-none">
+                Energy
+              </div>
+            </span>
+          </Link>
 
-      {/* Left corner — logo */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.9, delay: 0.3 }}
-        className="fixed top-4 left-6 z-50"
-      >
-        <Link to="/" className="flex items-center gap-2" data-testid="header-logo">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-nuit/80 backdrop-blur-xl">
-            <span className="text-[10px] font-bold prism-gradient-text">DE</span>
-          </span>
-          <span className="hidden sm:block text-[10px] font-semibold tracking-[0.28em] text-casse uppercase">
-            Dobryi Energy
-          </span>
-        </Link>
-      </motion.div>
+          <nav className="hidden lg:flex items-center gap-10">
+            {NAV.map((n, i) => (
+              <NavLink
+                key={n.to}
+                to={n.to}
+                data-testid={`nav-${n.to.replace("/", "")}`}
+                className={({ isActive }) =>
+                  `group relative text-[11px] font-semibold tracking-[0.22em] uppercase transition-colors ${
+                    isActive ? "text-champagne" : "text-casse hover:text-champagne"
+                  }`
+                }
+              >
+                {({ isActive }) => (
+                  <>
+                    <span className="text-champagne/60 mr-2">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {n.label}
+                    <span
+                      className={`absolute left-0 -bottom-1 h-px bg-champagne transition-all duration-500 ${
+                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    />
+                  </>
+                )}
+              </NavLink>
+            ))}
+          </nav>
 
-      {/* Right corner — hamburger */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.9, delay: 0.3 }}
-        className="fixed top-4 right-6 z-50"
-      >
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-nuit/80 backdrop-blur-xl text-casse hover:border-cyan-brand hover:text-cyan-brand transition-colors"
-          aria-label="Menu"
-          data-testid="header-menu-toggle"
-        >
-          {open ? <X size={18} /> : <Menu size={18} />}
-        </button>
-      </motion.div>
+          <div className="flex items-center gap-3">
+            <Link
+              to="/contact"
+              data-testid="header-cta-devis"
+              className="hidden md:inline-flex items-center gap-2 btn-primary py-2.5 px-5 text-[10px]"
+            >
+              Étude gratuite
+              <ArrowUpRight size={12} strokeWidth={2.5} />
+            </Link>
+            <button
+              onClick={() => setOpen((v) => !v)}
+              data-testid="header-menu-toggle"
+              className="lg:hidden inline-flex h-10 w-10 items-center justify-center border border-white/15 text-casse hover:border-champagne hover:text-champagne transition-colors"
+              aria-label="Menu"
+            >
+              {open ? <X size={18} /> : <Menu size={18} />}
+            </button>
+          </div>
+        </div>
+      </motion.header>
 
-      {/* Sticky sentinel — kept for backwards compat only */}
-      <header data-testid="site-header" className="sr-only" aria-hidden />
-
-      {/* Full-screen menu overlay */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -87,62 +109,39 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="fixed inset-0 z-40 bg-nuit/95 backdrop-blur-xl pt-32 px-6"
+            className="fixed inset-0 z-40 lg:hidden bg-nuit/95 backdrop-blur-xl pt-24 px-6"
             data-testid="mobile-menu"
           >
-            <nav className="max-w-3xl mx-auto flex flex-col gap-8">
+            <div className="flex flex-col gap-8">
               {NAV.map((n, i) => (
                 <motion.div
                   key={n.to}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.15 + i * 0.06, duration: 0.6 }}
+                  transition={{ delay: 0.1 + i * 0.06, duration: 0.6 }}
                 >
-                  <NavLink
+                  <Link
                     to={n.to}
                     onClick={() => setOpen(false)}
-                    data-testid={`nav-${n.to.replace("/", "")}`}
-                    className={({ isActive }) =>
-                      `group flex items-baseline gap-5 border-b border-white/10 pb-6 ${
-                        isActive ? "text-cyan-brand" : "text-casse hover:text-cyan-brand"
-                      } transition-colors duration-300`
-                    }
+                    className="flex items-baseline gap-4 border-b border-white/10 pb-6"
                   >
-                    <span className="text-[11px] font-semibold text-cyan-brand tracking-[0.3em]">
+                    <span className="text-[11px] font-semibold text-champagne tracking-[0.3em]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-5xl md:text-7xl font-bold tracking-[-0.03em]">
+                    <span className="text-5xl text-casse font-semibold tracking-[-0.03em]">
                       {n.label}
                     </span>
-                  </NavLink>
+                  </Link>
                 </motion.div>
               ))}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
-                className="mt-8 flex flex-col md:flex-row gap-3 items-start"
+              <Link
+                to="/contact"
+                onClick={() => setOpen(false)}
+                className="mt-8 btn-primary self-start"
               >
-                <Link
-                  to="/contact"
-                  onClick={() => setOpen(false)}
-                  className="btn-pill btn-pill-primary"
-                >
-                  Obtenir une étude gratuite
-                </Link>
-                <a
-                  href="https://wa.me/33773674257"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-pill btn-pill-ghost"
-                >
-                  WhatsApp
-                </a>
-              </motion.div>
-              <div className="mt-8 text-[11px] font-medium tracking-[0.2em] uppercase text-muted2">
-                Montauban · France · 07 73 67 42 57
-              </div>
-            </nav>
+                Étude gratuite <ArrowUpRight size={12} strokeWidth={2.5} />
+              </Link>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

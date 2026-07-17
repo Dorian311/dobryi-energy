@@ -2,7 +2,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Phone, MessageCircle, X } from "lucide-react";
 
-const WHATSAPP = "https://wa.me/33773674257?text=Bonjour%20Dobryi%20Energy%2C%20je%20souhaite%20un%20devis.";
+const WHATSAPP =
+  "https://wa.me/33773674257?text=Bonjour%20Dobryi%20Energy%2C%20je%20souhaite%20un%20devis.";
 const PHONE = "tel:+33773674257";
 
 export default function FloatingActions() {
@@ -23,17 +24,17 @@ export default function FloatingActions() {
               target="_blank"
               rel="noreferrer"
               data-testid="floating-whatsapp"
-              className="inline-flex items-center gap-3 pl-4 pr-5 py-3 bg-eco-brand text-nuit text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-casse transition-colors duration-300 border border-white/10"
+              className="inline-flex items-center gap-3 pl-4 pr-5 py-3 bg-nuit-800/95 backdrop-blur-xl border border-white/15 text-casse text-[10px] font-semibold uppercase tracking-[0.22em] hover:border-champagne hover:text-champagne transition-colors"
             >
-              <MessageCircle size={16} strokeWidth={2.5} />
+              <MessageCircle size={14} strokeWidth={2.5} />
               WhatsApp
             </a>
             <a
               href={PHONE}
               data-testid="floating-phone"
-              className="inline-flex items-center gap-3 pl-4 pr-5 py-3 bg-violet-brand text-casse text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-cyan-brand hover:text-nuit transition-colors duration-300 border border-white/10"
+              className="inline-flex items-center gap-3 pl-4 pr-5 py-3 bg-nuit-800/95 backdrop-blur-xl border border-white/15 text-casse text-[10px] font-semibold uppercase tracking-[0.22em] hover:border-champagne hover:text-champagne transition-colors"
             >
-              <Phone size={16} strokeWidth={2.5} />
+              <Phone size={14} strokeWidth={2.5} />
               07 73 67 42 57
             </a>
           </motion.div>
@@ -44,11 +45,11 @@ export default function FloatingActions() {
         onClick={() => setOpen((v) => !v)}
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.94 }}
-        className="relative h-14 w-14 rounded-full bg-cyan-brand text-nuit shadow-[0_10px_40px_-10px_#22D3EE] flex items-center justify-center border border-white/10"
+        className="relative h-14 w-14 rounded-full bg-champagne text-nuit shadow-[0_12px_36px_-8px_rgba(20,119,107,0.6)] flex items-center justify-center border border-white/10"
         aria-label="Contact rapide"
         data-testid="floating-toggle"
       >
-        <span className="absolute inset-0 rounded-full animate-ping bg-cyan-brand/30" />
+        <span className="absolute inset-0 rounded-full animate-ping bg-champagne/20" />
         {open ? <X size={20} strokeWidth={2.5} /> : <MessageCircle size={20} strokeWidth={2.5} />}
       </motion.button>
     </div>
