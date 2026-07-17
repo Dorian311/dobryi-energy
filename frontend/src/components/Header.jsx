@@ -33,7 +33,7 @@ export default function Header() {
         className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,backdrop-filter,border-color] duration-500 ${
           scrolled
             ? "bg-nuit/70 backdrop-blur-xl border-b border-white/10"
-            : "bg-transparent border-b border-transparent"
+            : "bg-gradient-to-b from-nuit/70 via-nuit/25 to-transparent border-b border-transparent"
         }`}
         data-testid="site-header"
       >
