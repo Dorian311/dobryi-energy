@@ -96,7 +96,7 @@ export const MARKETS = [
     title: "Collectivités & Public",
     kicker: "/C",
     lead: "Marchés publics, ombrières, bornes IRVE et bâtiments communaux — un partenaire unique.",
-    image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.pexels.com/photos/9875440/pexels-photo-9875440.jpeg?auto=compress&cs=tinysrgb&w=1600",
   },
 ];
 
