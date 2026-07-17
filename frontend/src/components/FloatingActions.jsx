@@ -23,7 +23,7 @@ export default function FloatingActions() {
               target="_blank"
               rel="noreferrer"
               data-testid="floating-whatsapp"
-              className="group inline-flex items-center gap-3 pl-4 pr-5 py-3 bg-emerald-brand text-nuit font-mono text-[11px] uppercase tracking-[0.2em] hover:bg-casse transition-colors duration-300 backdrop-blur-xl border border-white/10"
+              className="inline-flex items-center gap-3 pl-4 pr-5 py-3 bg-eco-brand text-nuit text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-casse transition-colors duration-300 border border-white/10"
             >
               <MessageCircle size={16} strokeWidth={2.5} />
               WhatsApp
@@ -31,7 +31,7 @@ export default function FloatingActions() {
             <a
               href={PHONE}
               data-testid="floating-phone"
-              className="group inline-flex items-center gap-3 pl-4 pr-5 py-3 bg-solar text-nuit font-mono text-[11px] uppercase tracking-[0.2em] hover:bg-casse transition-colors duration-300 backdrop-blur-xl border border-white/10"
+              className="inline-flex items-center gap-3 pl-4 pr-5 py-3 bg-violet-brand text-casse text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-cyan-brand hover:text-nuit transition-colors duration-300 border border-white/10"
             >
               <Phone size={16} strokeWidth={2.5} />
               07 73 67 42 57
@@ -44,11 +44,11 @@ export default function FloatingActions() {
         onClick={() => setOpen((v) => !v)}
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.94 }}
-        className="relative h-14 w-14 rounded-full bg-emerald-brand text-nuit shadow-[0_10px_40px_-10px_#00E599] flex items-center justify-center border border-white/10"
+        className="relative h-14 w-14 rounded-full bg-cyan-brand text-nuit shadow-[0_10px_40px_-10px_#22D3EE] flex items-center justify-center border border-white/10"
         aria-label="Contact rapide"
         data-testid="floating-toggle"
       >
-        <span className="absolute inset-0 rounded-full animate-ping bg-emerald-brand/40" />
+        <span className="absolute inset-0 rounded-full animate-ping bg-cyan-brand/30" />
         {open ? <X size={20} strokeWidth={2.5} /> : <MessageCircle size={20} strokeWidth={2.5} />}
       </motion.button>
     </div>

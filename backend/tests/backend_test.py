@@ -99,11 +99,9 @@ def test_devis_invalid_email_format(session):
     assert r.status_code == 422, r.text
 
 
-def test_devis_persists_to_mongo(session):
-    """Second successful devis to verify persistence returns an id (limit: 2 emails total)."""
+def test_devis_invalid_short_message(session):
+    """422 when message is too short (min_length=5). Does NOT send email."""
     payload = _valid_payload()
-    r = session.post(f"{API}/devis", json=payload, timeout=35)
-    assert r.status_code == 200, r.text
-    data = r.json()
-    assert data.get("status") == "success"
-    assert data.get("id")
+    payload["message"] = "hi"
+    r = session.post(f"{API}/devis", json=payload, timeout=15)
+    assert r.status_code == 422, r.text

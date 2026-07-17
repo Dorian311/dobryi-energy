@@ -17,26 +17,27 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        // Dobryi brand
+        // Dobryi — Prism palette
         nuit: {
-          DEFAULT: "#040914",
-          800: "#0A1128",
-          700: "#0F1A3B",
+          DEFAULT: "#05060B",
+          800: "#0A0C15",
+          700: "#111426",
         },
-        emerald: {
-          brand: "#00E599",
-        },
-        solar: {
-          DEFAULT: "#FFD600",
-        },
+        // primary accent (kept name emerald-brand for backwards compat — now Cyan électrique)
+        emerald: { brand: "#22D3EE" },
+        cyan: { brand: "#22D3EE" },
+        // secondary CTA accent (kept name solar for backwards compat — now Violet profond)
+        solar: { DEFAULT: "#8B5CF6" },
+        violet: { brand: "#8B5CF6" },
+        eco: { brand: "#34D399" },
         casse: "#F4F4F0",
-        muted2: "#8F9BB3",
+        muted2: "#8B94B5",
       },
       fontFamily: {
-        serif: ["'Playfair Display'", "Georgia", "serif"],
-        sans: ["Manrope", "system-ui", "sans-serif"],
-        mono: ["'JetBrains Mono'", "ui-monospace", "monospace"],
-        display: ["'Playfair Display'", "Georgia", "serif"],
+        serif: ["'Noto Kufi Arabic'", "system-ui", "sans-serif"],
+        sans: ["'Noto Kufi Arabic'", "system-ui", "sans-serif"],
+        mono: ["'Noto Kufi Arabic'", "system-ui", "sans-serif"],
+        display: ["'Noto Kufi Arabic'", "system-ui", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
