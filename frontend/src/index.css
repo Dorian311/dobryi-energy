@@ -8,8 +8,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #0c0a09;
-  color: #f5f5f4;
+  background: #04070F;
+  color: #F1F5F9;
   font-family: "Noto Kufi Arabic", system-ui, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -24,11 +24,10 @@ em,
 }
 
 ::selection {
-  background: #14776b;
-  color: #f5f5f4;
+  background: #0891B2;
+  color: #F1F5F9;
 }
 
-/* Lenis */
 html.lenis,
 html.lenis body {
   height: auto;
@@ -45,25 +44,25 @@ html.lenis body {
 
 @layer base {
   :root {
-    --background: 30 20% 5%;
-    --foreground: 60 9% 96%;
-    --card: 30 20% 10%;
-    --card-foreground: 60 9% 96%;
-    --popover: 30 20% 10%;
-    --popover-foreground: 60 9% 96%;
-    --primary: 60 9% 96%;
-    --primary-foreground: 30 20% 5%;
-    --secondary: 30 15% 15%;
-    --secondary-foreground: 60 9% 96%;
-    --muted: 30 15% 15%;
-    --muted-foreground: 25 10% 45%;
-    --accent: 30 15% 15%;
-    --accent-foreground: 60 9% 96%;
+    --background: 220 55% 4%;
+    --foreground: 214 32% 91%;
+    --card: 220 50% 8%;
+    --card-foreground: 214 32% 91%;
+    --popover: 220 50% 8%;
+    --popover-foreground: 214 32% 91%;
+    --primary: 214 32% 91%;
+    --primary-foreground: 220 55% 4%;
+    --secondary: 220 45% 12%;
+    --secondary-foreground: 214 32% 91%;
+    --muted: 220 45% 12%;
+    --muted-foreground: 215 20% 45%;
+    --accent: 220 45% 12%;
+    --accent-foreground: 214 32% 91%;
     --destructive: 0 62.8% 45%;
-    --destructive-foreground: 60 9% 96%;
-    --border: 60 9% 96% / 0.08;
-    --input: 60 9% 96% / 0.08;
-    --ring: 34 45% 65%;
+    --destructive-foreground: 214 32% 91%;
+    --border: 214 32% 91% / 0.08;
+    --input: 214 32% 91% / 0.08;
+    --ring: 190 91% 37%;
     --radius: 0.25rem;
   }
 }
@@ -72,111 +71,60 @@ html.lenis body {
   .container-x {
     @apply mx-auto w-full max-w-[1440px] px-6 md:px-12;
   }
-  /* Warm champagne halo — replaces the blue radial */
-  .champagne-halo {
+  /* Deep radial vignette — signature deep cyan glow behind heroes */
+  .deep-blue-radial {
     background: radial-gradient(
-      ellipse at 50% 40%,
-      rgba(20, 119, 107, 0.18) 0%,
-      rgba(30, 58, 138, 0.06) 32%,
-      rgba(12, 10, 9, 0) 70%
+      ellipse at 50% 50%,
+      rgba(8, 145, 178, 0.20) 0%,
+      rgba(30, 58, 138, 0.10) 35%,
+      rgba(4, 7, 15, 0) 70%
     );
   }
-  /* Editorial fine hairline */
-  .hairline {
-    background-image: linear-gradient(
-      to right,
-      transparent 0%,
-      rgba(245, 245, 244, 0.15) 20%,
-      rgba(245, 245, 244, 0.15) 80%,
-      transparent 100%
+  /* Signature gradient text — deep cyan → navy → deep cyan */
+  .prism-gradient-text {
+    background: linear-gradient(
+      92deg,
+      #22B8D4 0%,
+      #0891B2 30%,
+      #1E3A8A 60%,
+      #0E7490 90%
     );
-    height: 1px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    line-height: 1.05;
   }
-  /* Editorial number label — the signature of the new brand */
-  .chapter-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-family: "Noto Kufi Arabic", sans-serif;
-    font-size: 0.68rem;
-    font-weight: 600;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: #14776b;
-  }
-  .chapter-label::before {
-    content: "";
-    display: inline-block;
-    width: 1.5rem;
-    height: 1px;
-    background-color: #14776b;
-  }
-  /* Button styles — sharp rectangular editorial */
-  .btn-primary {
+  /* Pill buttons — sunshinepower style */
+  .btn-pill {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    padding: 1rem 1.75rem;
-    background: #14776b;
-    color: #f5f5f4;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    transition: background-color 400ms ease, color 400ms ease, transform 400ms ease;
-    white-space: nowrap;
-  }
-  .btn-primary:hover {
-    background: #1e9a8b;
-    color: #f5f5f4;
-  }
-  .btn-ghost {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 1rem 1.75rem;
-    background: transparent;
-    color: #f5f5f4;
-    border: 1px solid rgba(245, 245, 244, 0.15);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    transition: border-color 400ms ease, color 400ms ease;
-    white-space: nowrap;
-  }
-  .btn-ghost:hover {
-    border-color: #14776b;
-    color: #14776b;
-  }
-  .btn-underline {
-    display: inline-flex;
-    align-items: center;
     gap: 0.5rem;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #f5f5f4;
-    padding-bottom: 0.375rem;
-    border-bottom: 1px solid #14776b;
-    transition: color 400ms ease, gap 400ms ease;
+    padding: 0.9rem 1.6rem;
+    border-radius: 9999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: background-color 300ms ease, color 300ms ease, transform 300ms ease, border-color 300ms ease;
+    white-space: nowrap;
   }
-  .btn-underline:hover {
-    color: #14776b;
-    gap: 0.9rem;
+  .btn-pill-primary {
+    background: #F1F5F9;
+    color: #04070F;
   }
-  /* Accent text — thin petrol highlight for key words */
-  .accent-word {
-    font-weight: 200;
-    color: #1e9a8b;
-    letter-spacing: -0.02em;
+  .btn-pill-primary:hover {
+    background: #0891B2;
+    color: #F1F5F9;
   }
-  /* Sepia treatment on images */
-  .img-sepia {
-    filter: sepia(0.15) saturate(0.9) contrast(1.05);
+  .btn-pill-ghost {
+    background: rgba(255, 255, 255, 0.03);
+    color: #F1F5F9;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .btn-pill-ghost:hover {
+    border-color: #0891B2;
+    color: #22B8D4;
   }
   .noise::before {
     content: "";
@@ -195,9 +143,9 @@ html.lenis body {
 .editorial-input {
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(245, 245, 244, 0.15);
+  border-bottom: 1px solid rgba(241, 245, 249, 0.15);
   padding: 18px 0;
-  color: #f5f5f4;
+  color: #F1F5F9;
   font-family: "Noto Kufi Arabic", sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -206,10 +154,10 @@ html.lenis body {
   transition: border-color 400ms ease;
 }
 .editorial-input::placeholder {
-  color: rgba(120, 113, 108, 0.7);
+  color: rgba(100, 116, 139, 0.7);
 }
 .editorial-input:focus {
-  border-bottom-color: #14776b;
+  border-bottom-color: #0891B2;
 }
 .editorial-input:disabled {
   opacity: 0.5;

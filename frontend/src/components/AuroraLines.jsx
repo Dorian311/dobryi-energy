@@ -1,6 +1,6 @@
 /**
- * AuroraLines — SVG wave art used as a background signature element.
- * A stack of translucent Prism-gradient curves.
+ * AuroraLines — SVG wave art. Professional deep-cyan/navy monochromatic
+ * (no more multi-color prism — clean & sober).
  */
 export default function AuroraLines({ className = "" }) {
   const paths = [
@@ -18,32 +18,29 @@ export default function AuroraLines({ className = "" }) {
     >
       <defs>
         <linearGradient id="g1" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stopColor="#EC4899" stopOpacity="0" />
-          <stop offset="30%" stopColor="#EC4899" stopOpacity="0.5" />
-          <stop offset="60%" stopColor="#22D3EE" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#22D3EE" stopOpacity="0" />
+          <stop offset="0%" stopColor="#0891B2" stopOpacity="0" />
+          <stop offset="40%" stopColor="#0891B2" stopOpacity="0.55" />
+          <stop offset="100%" stopColor="#0891B2" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="g2" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stopColor="#8B5CF6" stopOpacity="0" />
-          <stop offset="40%" stopColor="#8B5CF6" stopOpacity="0.6" />
-          <stop offset="70%" stopColor="#22D3EE" stopOpacity="0.6" />
-          <stop offset="100%" stopColor="#22D3EE" stopOpacity="0" />
+          <stop offset="0%" stopColor="#1E3A8A" stopOpacity="0" />
+          <stop offset="45%" stopColor="#1E3A8A" stopOpacity="0.6" />
+          <stop offset="100%" stopColor="#1E3A8A" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="g3" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stopColor="#22D3EE" stopOpacity="0" />
-          <stop offset="40%" stopColor="#22D3EE" stopOpacity="0.7" />
-          <stop offset="80%" stopColor="#34D399" stopOpacity="0.6" />
-          <stop offset="100%" stopColor="#34D399" stopOpacity="0" />
+          <stop offset="0%" stopColor="#0E7490" stopOpacity="0" />
+          <stop offset="50%" stopColor="#22B8D4" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#0E7490" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="g4" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stopColor="#EC4899" stopOpacity="0" />
-          <stop offset="50%" stopColor="#8B5CF6" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#EC4899" stopOpacity="0" />
+          <stop offset="0%" stopColor="#155E75" stopOpacity="0" />
+          <stop offset="50%" stopColor="#155E75" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#155E75" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="g5" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0%" stopColor="#34D399" stopOpacity="0" />
-          <stop offset="50%" stopColor="#22D3EE" stopOpacity="0.5" />
-          <stop offset="100%" stopColor="#34D399" stopOpacity="0" />
+          <stop offset="0%" stopColor="#0891B2" stopOpacity="0" />
+          <stop offset="55%" stopColor="#0891B2" stopOpacity="0.4" />
+          <stop offset="100%" stopColor="#0891B2" stopOpacity="0" />
         </linearGradient>
       </defs>
       {paths.map((p, i) => (

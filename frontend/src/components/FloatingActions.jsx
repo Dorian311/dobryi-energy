@@ -24,7 +24,7 @@ export default function FloatingActions() {
               target="_blank"
               rel="noreferrer"
               data-testid="floating-whatsapp"
-              className="inline-flex items-center gap-3 pl-4 pr-5 py-3 bg-nuit-800/95 backdrop-blur-xl border border-white/15 text-casse text-[10px] font-semibold uppercase tracking-[0.22em] hover:border-champagne hover:text-champagne transition-colors"
+              className="inline-flex items-center gap-3 pl-4 pr-5 py-3 rounded-full bg-nuit-800/95 backdrop-blur-xl border border-white/15 text-casse text-[10px] font-semibold uppercase tracking-[0.2em] hover:border-cyan-brand hover:text-cyan-brand transition-colors"
             >
               <MessageCircle size={14} strokeWidth={2.5} />
               WhatsApp
@@ -32,7 +32,7 @@ export default function FloatingActions() {
             <a
               href={PHONE}
               data-testid="floating-phone"
-              className="inline-flex items-center gap-3 pl-4 pr-5 py-3 bg-nuit-800/95 backdrop-blur-xl border border-white/15 text-casse text-[10px] font-semibold uppercase tracking-[0.22em] hover:border-champagne hover:text-champagne transition-colors"
+              className="inline-flex items-center gap-3 pl-4 pr-5 py-3 rounded-full bg-nuit-800/95 backdrop-blur-xl border border-white/15 text-casse text-[10px] font-semibold uppercase tracking-[0.2em] hover:border-cyan-brand hover:text-cyan-brand transition-colors"
             >
               <Phone size={14} strokeWidth={2.5} />
               07 73 67 42 57
@@ -45,11 +45,11 @@ export default function FloatingActions() {
         onClick={() => setOpen((v) => !v)}
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.94 }}
-        className="relative h-14 w-14 rounded-full bg-champagne text-nuit shadow-[0_12px_36px_-8px_rgba(20,119,107,0.6)] flex items-center justify-center border border-white/10"
+        className="relative h-14 w-14 rounded-full bg-cyan-brand text-casse shadow-[0_12px_36px_-8px_rgba(8,145,178,0.6)] flex items-center justify-center border border-white/10"
         aria-label="Contact rapide"
         data-testid="floating-toggle"
       >
-        <span className="absolute inset-0 rounded-full animate-ping bg-champagne/20" />
+        <span className="absolute inset-0 rounded-full animate-ping bg-cyan-brand/25" />
         {open ? <X size={20} strokeWidth={2.5} /> : <MessageCircle size={20} strokeWidth={2.5} />}
       </motion.button>
     </div>

@@ -17,24 +17,24 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        // Dobryi — palette professionnelle "Champagne & Indigo"
+        // Dobryi — Deep Cyan palette (professionnelle, sobre)
         nuit: {
-          DEFAULT: "#0C0A09",
-          800: "#1C1917",
-          700: "#292524",
+          DEFAULT: "#04070F",
+          800: "#08111E",
+          700: "#0F1B30",
         },
-        // Primary accent (aliases kept for backwards compat)
-        champagne: { DEFAULT: "#14776B", light: "#1E9A8B", dark: "#0E5A50" },
-        emerald: { brand: "#14776B" }, // alias -> petrol
-        cyan: { brand: "#14776B" }, // alias -> petrol
-        // Secondary accent
+        // Primary accent (aliases to deep cyan)
+        cyan: { brand: "#0891B2", light: "#22B8D4", dark: "#0E7490" },
+        emerald: { brand: "#0891B2" },
+        champagne: { DEFAULT: "#0891B2", light: "#22B8D4", dark: "#0E7490" },
+        // Secondary accent (deep navy for tension)
         indigo: { brand: "#1E3A8A" },
-        solar: { DEFAULT: "#1E3A8A" }, // alias -> deep navy
-        violet: { brand: "#1E3A8A" }, // alias
-        // Sparse eco
-        eco: { brand: "#059669" },
-        casse: "#F5F5F4",
-        muted2: "#78716C",
+        solar: { DEFAULT: "#1E3A8A" },
+        violet: { brand: "#1E3A8A" },
+        // Sparse eco (not used often)
+        eco: { brand: "#0891B2" },
+        casse: "#F1F5F9",
+        muted2: "#64748B",
       },
       fontFamily: {
         serif: ["'Noto Kufi Arabic'", "system-ui", "sans-serif"],

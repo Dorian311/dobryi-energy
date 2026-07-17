@@ -1,110 +1,85 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
-import MaskedLines from "../components/MaskedLines";
+import EchoHeading from "../components/EchoHeading";
+import AuroraLines from "../components/AuroraLines";
 import Reveal from "../components/Reveal";
 
 const VALEURS = [
-  { n: "01", title: "Local", text: "Ancrés à Montauban, au plus près du terrain et des acteurs de la région." },
-  { n: "02", title: "Rigoureux", text: "Chaque installation étudiée, dimensionnée, contrôlée. Rien laissé au hasard." },
-  { n: "03", title: "Engagés", text: "La transition énergétique est notre métier, notre expertise, notre raison d’être." },
+  { n: "01", title: "Local", text: "Ancrés à Montauban, au plus près du terrain." },
+  { n: "02", title: "Rigoureux", text: "Chaque installation étudiée, dimensionnée, contrôlée." },
+  { n: "03", title: "Engagés", text: "La transition énergétique, notre métier." },
 ];
 
 export default function About() {
   useEffect(() => window.scrollTo(0, 0), []);
   return (
-    <main className="bg-nuit pt-32 md:pt-40">
+    <main className="bg-nuit">
       {/* Hero */}
-      <section className="container-x pb-16 md:pb-24" data-testid="about-hero">
-        <div className="chapter-label mb-10">À propos</div>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <div className="md:col-span-8">
-            <MaskedLines
-              as="h1"
-              lines={[
-                <>Votre partenaire</>,
-                <>local de la</>,
-                <><span className="accent-word">transition énergétique.</span></>,
-              ]}
-              className="text-casse text-[48px] sm:text-6xl md:text-7xl lg:text-[104px] leading-[0.98] tracking-[-0.035em] font-semibold"
-            />
-          </div>
-          <Reveal delay={0.5} className="md:col-span-4 md:pt-8">
-            <p className="text-muted2 text-base md:text-lg leading-relaxed">
-              Basée à Montauban, Dobryi Energy réunit des professionnels du solaire,
-              de l’électrotechnique et de la sécurité chantier. Une équipe formée,
-              certifiée QualiPV et RGE Qualibat.
-            </p>
-          </Reveal>
+      <section
+        className="relative min-h-[70vh] flex flex-col items-center justify-center px-6 pt-32 pb-16 overflow-hidden"
+        data-testid="about-hero"
+      >
+        <div className="absolute inset-0 deep-blue-radial" />
+        <div className="relative z-10 text-[11px] font-semibold tracking-[0.32em] uppercase prism-gradient-text mb-6">
+          À propos
         </div>
-      </section>
-
-      {/* Editorial image */}
-      <section className="container-x pb-24">
-        <Reveal>
-          <div className="overflow-hidden border border-white/10">
-            <img
-              src="https://images.pexels.com/photos/34347028/pexels-photo-34347028.jpeg"
-              alt="Dobryi Energy Montauban"
-              className="w-full h-[420px] md:h-[620px] object-cover img-sepia"
-            />
-          </div>
+        <EchoHeading
+          before="Votre partenaire"
+          echo="local et engagé."
+          className="relative z-10 text-[42px] sm:text-6xl md:text-7xl lg:text-[88px] leading-[1] tracking-[-0.03em] font-bold max-w-5xl"
+        />
+        <Reveal delay={0.4} className="relative z-10">
+          <p className="mt-10 text-center text-muted2 text-base max-w-md">
+            Basée à Montauban. Une équipe formée, certifiée QualiPV et RGE Qualibat.
+          </p>
         </Reveal>
       </section>
 
-      {/* Valeurs — editorial */}
-      <section className="border-t border-white/10 py-24 md:py-32" data-testid="about-valeurs">
-        <div className="container-x grid grid-cols-1 md:grid-cols-12 gap-12">
-          <div className="md:col-span-4">
-            <Reveal>
-              <div className="chapter-label mb-8">Nos valeurs</div>
-              <h2 className="text-4xl md:text-5xl text-casse font-semibold tracking-[-0.03em] leading-[1.02]">
-                Un métier <span className="accent-word">de conviction.</span>
-              </h2>
+      {/* Aurora manifesto */}
+      <section
+        className="relative min-h-[60vh] flex flex-col items-center justify-center px-6 py-32 overflow-hidden border-t border-white/[0.05]"
+        data-testid="about-valeurs"
+      >
+        <div className="absolute inset-0">
+          <AuroraLines />
+        </div>
+        <Reveal className="relative z-10">
+          <EchoHeading
+            before="Écouter, exécuter,"
+            echo="avancer ensemble."
+            className="text-[36px] sm:text-5xl md:text-6xl lg:text-7xl leading-[1] tracking-[-0.03em] font-bold max-w-4xl"
+          />
+        </Reveal>
+        <div className="relative z-10 mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl w-full">
+          {VALEURS.map((v, i) => (
+            <Reveal key={v.n} delay={i * 0.08}>
+              <div className="rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm p-8 text-center h-full hover:border-cyan-brand/30 hover:bg-white/[0.04] transition-all duration-500">
+                <div className="text-[10px] font-semibold tracking-[0.3em] uppercase prism-gradient-text mb-4">
+                  {v.n}
+                </div>
+                <h3 className="text-2xl text-casse font-bold tracking-[-0.02em] mb-3">{v.title}</h3>
+                <p className="text-muted2 text-sm leading-relaxed">{v.text}</p>
+              </div>
             </Reveal>
-          </div>
-          <div className="md:col-span-8 md:pl-8">
-            <div className="space-y-10">
-              {VALEURS.map((v, i) => (
-                <Reveal key={v.n} delay={i * 0.08}>
-                  <div className="flex gap-8 items-start pb-10 border-b border-white/10 last:border-0">
-                    <span className="text-[10px] font-semibold tracking-[0.3em] text-champagne shrink-0 pt-2">
-                      {v.n}
-                    </span>
-                    <div className="flex-1">
-                      <h3 className="text-2xl md:text-3xl text-casse font-semibold tracking-tight mb-3">
-                        {v.title}
-                      </h3>
-                      <p className="text-muted2 text-sm md:text-base leading-relaxed max-w-md">
-                        {v.text}
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-32 border-t border-white/10 relative overflow-hidden">
-        <div className="absolute inset-0 champagne-halo" />
-        <div className="container-x relative grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-          <div className="md:col-span-8">
-            <Reveal>
-              <h3 className="text-5xl md:text-7xl text-casse leading-[0.98] font-semibold tracking-[-0.035em]">
-                Discutons de<br />
-                <span className="accent-word">votre projet.</span>
-              </h3>
-            </Reveal>
-          </div>
-          <Reveal delay={0.15} className="md:col-span-4">
-            <Link to="/contact" className="btn-primary" data-testid="about-cta">
-              Prendre contact <ArrowUpRight size={14} strokeWidth={2.5} />
-            </Link>
-          </Reveal>
-        </div>
+      <section className="relative min-h-[60vh] flex flex-col items-center justify-center px-6 py-32 border-t border-white/[0.05] overflow-hidden">
+        <div className="absolute inset-0 deep-blue-radial opacity-60" />
+        <Reveal className="relative z-10">
+          <EchoHeading
+            before="Discutons de"
+            echo="votre projet."
+            className="text-[36px] sm:text-5xl md:text-6xl lg:text-7xl leading-[1] tracking-[-0.03em] font-bold"
+          />
+        </Reveal>
+        <Reveal delay={0.2} className="relative z-10">
+          <Link to="/contact" className="mt-10 btn-pill btn-pill-primary" data-testid="about-cta">
+            Prendre contact
+          </Link>
+        </Reveal>
       </section>
     </main>
   );
