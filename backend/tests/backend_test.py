@@ -36,19 +36,42 @@ def test_health(session):
 
 
 # ---------- Realisations ----------
-def test_realisations_returns_six_items(session):
+def test_realisations_returns_twelve_items(session):
     r = session.get(f"{API}/realisations", timeout=15)
     assert r.status_code == 200, r.text
     data = r.json()
     assert "items" in data
     items = data["items"]
     assert isinstance(items, list)
-    assert len(items) >= 6, f"Expected >=6 items, got {len(items)}"
+    assert len(items) == 12, f"Expected exactly 12 items, got {len(items)}"
     for item in items:
         for key in ("id", "title", "sector", "image", "kpi"):
             assert key in item, f"Missing key '{key}' in item {item}"
         assert isinstance(item["title"], str) and len(item["title"]) > 0
         assert item["image"].startswith("http")
+
+
+def test_realisations_includes_new_ids(session):
+    r = session.get(f"{API}/realisations", timeout=15)
+    assert r.status_code == 200, r.text
+    ids = {i["id"] for i in r.json()["items"]}
+    expected_new = {
+        "cooperative-agricole-gers",
+        "supermarche-albi",
+        "irve-mairie-cahors",
+        "site-industriel-castres",
+        "controle-parc-solaire",
+        "maintenance-flotte-pv",
+    }
+    missing = expected_new - ids
+    assert not missing, f"Missing new realisation ids: {missing}"
+
+
+def test_realisations_sectors_include_new(session):
+    r = session.get(f"{API}/realisations", timeout=15)
+    sectors = {i["sector"] for i in r.json()["items"]}
+    for expected in ("Contrôle", "Maintenance", "Sécurité"):
+        assert expected in sectors, f"Sector '{expected}' missing. Got: {sectors}"
 
 
 # ---------- Devis ----------

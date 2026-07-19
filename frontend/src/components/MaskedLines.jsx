@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 
 /**
  * MaskedLines — Kinetic masked line-by-line reveal.
- * Each line renders inside overflow-hidden. Child animates y from 100% to 0.
+ * Each line renders inside overflow-hidden with padding-bottom to prevent
+ * descender clipping (ç, é, y letters).
  */
 export default function MaskedLines({
   lines = [],
@@ -18,8 +19,8 @@ export default function MaskedLines({
       {lines.map((line, i) => (
         <span
           key={i}
-          className="block overflow-hidden"
-          style={{ lineHeight: 1.02 }}
+          className="block overflow-hidden pb-1"
+          style={{ lineHeight: 1.1 }}
         >
           <motion.span
             className={`block will-change-transform ${lineClassName}`}

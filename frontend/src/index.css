@@ -93,7 +93,8 @@ html.lenis body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    line-height: 1.05;
+    line-height: 1.15;
+    padding-bottom: 0.08em;
   }
   /* Pill buttons — sunshinepower style */
   .btn-pill {

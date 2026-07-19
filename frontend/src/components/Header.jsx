@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const NAV = [
+  { to: "/", label: "Accueil" },
   { to: "/solutions", label: "Solutions" },
   { to: "/realisations", label: "Réalisations" },
   { to: "/a-propos", label: "À propos" },
@@ -54,7 +55,8 @@ export default function Header() {
               <NavLink
                 key={n.to}
                 to={n.to}
-                data-testid={`nav-${n.to.replace("/", "")}`}
+                end={n.to === "/"}
+                data-testid={`nav-${n.to === "/" ? "accueil" : n.to.replace("/", "")}`}
                 className={({ isActive }) =>
                   `group relative text-[11px] font-semibold tracking-[0.2em] uppercase transition-colors ${
                     isActive ? "text-cyan-brand" : "text-casse hover:text-cyan-brand"
@@ -118,7 +120,9 @@ export default function Header() {
                 >
                   <NavLink
                     to={n.to}
+                    end={n.to === "/"}
                     onClick={() => setOpen(false)}
+                    data-testid={`nav-mobile-${n.to === "/" ? "accueil" : n.to.replace("/", "")}`}
                     className={({ isActive }) =>
                       `flex items-baseline gap-4 border-b border-white/10 pb-5 ${
                         isActive ? "text-cyan-brand" : "text-casse"
