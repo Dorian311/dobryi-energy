@@ -10,7 +10,7 @@ const SERVER_START_TIME = Date.now();
  * @param {Object} devServer - Webpack dev server instance
  * @param {Object} healthPlugin - Instance of WebpackHealthPlugin
  */
-function setupHealthEndpoints(devServer, healthPlugin) {
+frontendfunction setupHealthEndpoints(devServer, healthPlugin) {
   if (!devServer || !devServer.app) {
     console.warn('[Health Check] Dev server not available, skipping health endpoints');
     return;

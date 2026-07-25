@@ -9,7 +9,7 @@ const VALEURS = [
   {
     n: "01",
     title: "Local",
-    text: "Ancrés à Montauban, au plus près du terrain et des acteurs de la région Occitanie.",
+    text: "Basés à Montauban, nous intervenons partout en France, au plus près du terrain.",
   },
   {
     n: "02",
@@ -60,9 +60,10 @@ export default function About() {
         />
         <Reveal delay={0.4} className="relative z-10">
           <p className="mt-10 text-center text-muted2 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            Basée à Montauban, en Tarn-et-Garonne, Dobryi Energy conçoit,
-            installe et maintient des solutions solaires et électriques pour
-            les agriculteurs, les entreprises et les collectivités.
+            Basée à Montauban en Tarn-et-Garonne, Dobryi Energy intervient
+            <span className="text-casse"> partout en France</span> auprès des
+            agriculteurs, entreprises et collectivités pour concevoir, installer
+            et maintenir leurs installations solaires et bornes de recharge.
           </p>
         </Reveal>
       </section>
@@ -102,9 +103,8 @@ export default function About() {
                   centrale.
                 </p>
                 <p>
-                  Notre équipe, formée et certifiée, intervient sur toute la
-                  région Occitanie et au-delà, pour des projets de 9 kWc à
-                  plusieurs MWc.
+                  Notre équipe, formée et certifiée, intervient partout en France,
+                  pour des projets de 9 kWc à plusieurs MWc.
                 </p>
               </div>
             </Reveal>

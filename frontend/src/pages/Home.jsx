@@ -48,7 +48,7 @@ export default function Home() {
           className="relative z-20 text-center mb-10"
         >
           <div className="text-[11px] font-semibold tracking-[0.32em] uppercase prism-gradient-text">
-            Dobryi Energy · Montauban
+            Dobryi Energy · Basés à Montauban · Interventions France entière
           </div>
         </motion.div>
 
@@ -160,7 +160,7 @@ export default function Home() {
               </h2>
               <p className="text-muted2 text-base md:text-lg leading-relaxed mb-6 max-w-lg">
                 Basée à Montauban, Dobryi Energy accompagne agriculteurs, entreprises
-                et collectivités dans leur transition énergétique.
+                et collectivités <span className="text-casse">partout en France</span> dans leur transition énergétique.
               </p>
               <p className="text-muted2 text-base md:text-lg leading-relaxed mb-10 max-w-lg">
                 De l'étude à la maintenance, en passant par le contrôle indépendant
