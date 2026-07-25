@@ -44,7 +44,7 @@ export default function Footer() {
             07 73 67 42 57
           </a>
           <div className="text-[11px] font-medium tracking-[0.2em] uppercase text-muted2">
-            Montauban · France
+            France entière
           </div>
         </div>
       </div>
