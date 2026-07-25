@@ -1,0 +1,39 @@
+{
+  "summary": "Regression tests for Montauban/Occitanie text-content cleanup. Backend: 10 passed, 1 skipped (devis email send skipped per request). Frontend text-content checks mostly OK: Occitanie absent everywhere; hero label, Home 'Qui sommes-nous' paragraph, About hero paragraph, About valeur 01, Contact 'France entière' pill are all correct. Two issues found: (1) Footer renders 'Montauban · France' on EVERY page — this violates the 'Montauban should appear ONLY on Contact page inside the legal address block' rule (appears on /, /a-propos, /solutions, /realisations, /contact). (2) The full legal address block '8 Rue Roger Carpentier, Logement 13, 82000 Montauban' is NOT rendered anywhere on the Contact page — review states it must be preserved. (3) Backend realisation item with id containing 'Tarn-et-Garonne' still has one item location='Montauban' — this renders as a card location on /realisations so Montauban appears there too outside the legal address block.",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "/api/realisations", "issue": "Item 'ferme-solaire-tarn-garonne' still has location='Montauban'. This renders on the /realisations page and violates the global-sanity rule that Montauban must appear only inside the Contact legal address block. Consider changing to 'Tarn-et-Garonne' or 'France' if the intent was to purge Montauban from marketing surfaces."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {"component": "Footer (Footer.jsx line 47)", "issue": "Renders 'Montauban · France' on every page. Violates the requirement that 'Montauban' should appear ONLY on the Contact page inside the legal address block.", "selector": "footer div.text-muted2", "priority": "HIGH"},
+      {"component": "Contact page", "issue": "Full legal address block '8 Rue Roger Carpentier, Logement 13, 82000 Montauban' is missing from Contact.jsx. Review request states this block must be preserved on the Contact page.", "selector": "[data-testid='contact-hero'] ~ *", "priority": "HIGH"}
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/backend_test.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Remove 'Montauban · France' from Footer.jsx OR replace with a France-wide tagline (e.g., 'Interventions partout en France'). Move the Montauban mention exclusively into a new legal address block on the Contact page.",
+    "Add the full legal address block '8 Rue Roger Carpentier, Logement 13, 82000 Montauban' inside Contact.jsx (e.g., under the contact pills or in a dedicated legal-info section) with an appropriate data-testid.",
+    "Change /api/realisations item that still has location='Montauban' (id 'ferme-solaire-tarn-garonne', server.py line 186) to something non-Montauban if the marketing purge is meant to apply to realisation locations as well."
+  ],
+  "critical_code_review_comments": [
+    "Footer is the single source of the Montauban mention leak across all pages; centralising the legal/address info on Contact only is safer.",
+    "backend_test.py devis-email test is now skipped; ensure a manual smoke of /api/devis is retained before releases."
+  ],
+  "updated_files": [
+    "/app/backend/tests/backend_test.py (added test_realisations_no_occitanie, test_realisations_specific_locations; skipped test_devis_valid_payload_returns_success per review request)"
+  ],
+  "success_rate": {"backend": "100% (10/10 executed passed, 1 intentionally skipped)", "frontend": "80% (8/10 text checks pass; 2 fail: footer Montauban leak + missing Contact legal address block)"},
+  "seed_data_creation": "None",
+  "retest_needed": true,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Backend regression file is /app/backend/tests/backend_test.py. Occitanie is fully purged from /api/realisations. Remaining issues are UI-only: (a) Footer.jsx line 47 renders 'Montauban · France' globally; (b) Contact.jsx is missing the full legal address block; (c) server.py still has one realisation item with location='Montauban'. Re-run the same case-insensitive innerText scan across /, /a-propos, /solutions, /realisations, /contact after main agent fixes.",
+  "rca of the issue": "Main agent scrubbed Montauban from the four target strings (Home hero label, Home présentation paragraph, About hero paragraph, About valeur 01) and updated Contact pill to 'France entière', but (1) did not touch Footer.jsx which still surfaces 'Montauban · France' on every page and (2) did not add back the full legal address block on Contact.jsx (only the city label existed before, now not even that). Additionally one /api/realisations item retained 'Montauban' as its card location. Reproduction: open any page, scroll to footer -> 'MONTAUBAN · FRANCE' visible; open /contact -> no '8 Rue Roger Carpentier' string; GET /api/realisations -> one item with location='Montauban'."
+}

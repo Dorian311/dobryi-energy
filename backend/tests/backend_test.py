@@ -74,6 +74,28 @@ def test_realisations_sectors_include_new(session):
         assert expected in sectors, f"Sector '{expected}' missing. Got: {sectors}"
 
 
+# ---------- Regression: Occitanie removed & specific locations ----------
+def test_realisations_no_occitanie(session):
+    r = session.get(f"{API}/realisations", timeout=15)
+    assert r.status_code == 200, r.text
+    items = r.json()["items"]
+    offenders = [i["id"] for i in items if str(i.get("location", "")).strip().lower() == "occitanie"]
+    assert not offenders, f"Items still have location='Occitanie': {offenders}"
+
+
+def test_realisations_specific_locations(session):
+    r = session.get(f"{API}/realisations", timeout=15)
+    assert r.status_code == 200, r.text
+    by_id = {i["id"]: i for i in r.json()["items"]}
+    assert "mairie-ombriere" in by_id, "Missing 'mairie-ombriere'"
+    assert by_id["mairie-ombriere"]["location"] == "Lyon", \
+        f"'mairie-ombriere' location expected 'Lyon', got: {by_id['mairie-ombriere'].get('location')}"
+    assert "maintenance-flotte-pv" in by_id, "Missing 'maintenance-flotte-pv'"
+    assert by_id["maintenance-flotte-pv"]["location"] == "France entière", \
+        f"'maintenance-flotte-pv' location expected 'France entière', got: {by_id['maintenance-flotte-pv'].get('location')}"
+
+
+
 # ---------- Devis ----------
 def _valid_payload():
     unique = uuid.uuid4().hex[:8]
@@ -88,6 +110,7 @@ def _valid_payload():
     }
 
 
+@pytest.mark.skip(reason="Skipped per review request: do not send a devis email")
 def test_devis_valid_payload_returns_success(session):
     payload = _valid_payload()
     t0 = time.time()

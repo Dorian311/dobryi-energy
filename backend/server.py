@@ -201,7 +201,7 @@ async def list_realisations():
         {
             "id": "mairie-ombriere",
             "title": "Ombrière communale",
-            "location": "Occitanie",
+            "location": "Lyon",
             "sector": "Collectivité",
             "year": 2024,
             "image": "https://images.pexels.com/photos/9875440/pexels-photo-9875440.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -273,7 +273,7 @@ async def list_realisations():
         {
             "id": "maintenance-flotte-pv",
             "title": "Contrat maintenance 12 sites",
-            "location": "Occitanie",
+            "location": "France entière",
             "sector": "Maintenance",
             "year": 2025,
             "image": "https://images.pexels.com/photos/8961034/pexels-photo-8961034.jpeg?auto=compress&cs=tinysrgb&w=1600",
