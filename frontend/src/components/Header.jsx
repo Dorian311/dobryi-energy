@@ -41,12 +41,11 @@ export default function Header() {
         <div className="container-x h-16 md:h-20 flex items-center justify-between gap-6">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 shrink-0" data-testid="header-logo">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-nuit/60">
-              <span className="text-[10px] font-bold prism-gradient-text">DE</span>
-            </span>
-            <span className="hidden sm:block text-[11px] font-semibold tracking-[0.28em] uppercase text-casse leading-none">
-              Dobryi Energy
-            </span>
+            <img
+              src="/logo/dobryi-energy.png"
+              alt="Dobryi Energy"
+              className="h-11 md:h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}

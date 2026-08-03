@@ -5,9 +5,11 @@ export default function Footer() {
     <footer className="relative border-t border-white/[0.05] bg-nuit" data-testid="site-footer">
       <div className="container-x py-14 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
         <div className="text-center md:text-left">
-          <div className="text-[10px] font-semibold tracking-[0.32em] uppercase prism-gradient-text mb-3">
-            Dobryi Energy
-          </div>
+          <img
+            src="/logo/dobryi-energy.png"
+            alt="Dobryi Energy"
+            className="h-16 md:h-20 w-auto mb-4 mx-auto md:mx-0"
+          />
           <div className="text-sm text-muted2">
             Photovoltaïque · IRVE · Maintenance · Sécurité chantier
           </div>
