@@ -82,21 +82,21 @@ export const MARKETS = [
     title: "Agricole",
     kicker: "/A",
     lead: "Rentabilisez toitures et hangars. Autoconsommation ou revente, ombrières agrivoltaïques.",
-    image: "https://images.pexels.com/photos/34182412/pexels-photo-34182412.jpeg",
+    image: "https://cdn.pixabay.com/photo/2017/08/21/20/29/solar-2666770_1280.jpg",
   },
   {
     id: "industriel",
     title: "Industriel & Tertiaire",
     kicker: "/B",
     lead: "Décarbonez votre site, sécurisez votre facture énergétique, électrifiez vos flottes.",
-    image: "https://images.pexels.com/photos/34347028/pexels-photo-34347028.jpeg",
+    image: "https://cdn.pixabay.com/photo/2026/06/23/06/18/06-18-49-31_1280.jpg",
   },
   {
     id: "collectivite",
     title: "Collectivités & Public",
     kicker: "/C",
     lead: "Marchés publics, ombrières, bornes IRVE et bâtiments communaux — un partenaire unique.",
-    image: "https://images.pexels.com/photos/9875440/pexels-photo-9875440.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    image: "https://cdn.pixabay.com/photo/2020/02/06/15/11/solar-4824604_1280.jpg",
   },
 ];
 
