@@ -19,6 +19,9 @@ export default function FloatingActions() {
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="mb-3 flex flex-col gap-2 items-end"
           >
+            <p className="max-w-[180px] text-right text-[10px] leading-snug text-casse/80 bg-nuit-800/90 backdrop-blur-xl border border-white/10 rounded-2xl px-3 py-2">
+              Nos équipes sont disponibles 24h/24, 7j/7 pour vous dépanner
+            </p>
             <a
               href={WHATSAPP}
               target="_blank"
