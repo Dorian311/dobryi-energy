@@ -141,7 +141,7 @@ export default function Home() {
           <Reveal className="lg:col-span-6">
             <div className="relative overflow-hidden rounded-2xl border border-white/10">
               <img
-                src="https://images.pexels.com/photos/34347028/pexels-photo-34347028.jpeg"
+                src="https://images.unsplash.com/photo-1648135327756-b606e2eb8caa?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Équipe Dobryi Energy"
                 className="w-full h-[500px] md:h-[620px] object-cover grayscale-[15%] hover:grayscale-0 hover:scale-105 transition-all duration-[1200ms]"
               />
