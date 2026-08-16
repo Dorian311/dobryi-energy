@@ -74,7 +74,7 @@ export default function About() {
           <Reveal className="lg:col-span-6">
             <div className="relative overflow-hidden rounded-2xl border border-white/10">
               <img
-                src="https://images.pexels.com/photos/29407508/pexels-photo-29407508.jpeg"
+                src="https://images.unsplash.com/photo-1648135327756-b606e2eb8caa?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Installation Dobryi Energy"
                 className="w-full h-[420px] md:h-[560px] object-cover grayscale-[20%] hover:grayscale-0 hover:scale-105 transition-all duration-[1200ms]"
               />
