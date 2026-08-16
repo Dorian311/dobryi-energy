@@ -101,7 +101,7 @@ export const SOLUTIONS = [
       "Hangars, entrepôts, bâtiments agricoles",
       "Études & plans sur-mesure",
     ],
-    image: "https://images.unsplash.com/photo-1541971297127-2f0eeb050c0d?auto=format&fit=crop&w=1600&q=80",
+    image: "https://images.unsplash.com/photo-1649587345666-0f4ad68aa723?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     accent: "emerald",
   },
 ];
