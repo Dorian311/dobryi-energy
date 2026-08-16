@@ -74,6 +74,36 @@ export const SOLUTIONS = [
     image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80",
     accent: "emerald",
   },
+  {
+    id: "bardage",
+    slug: "bardage",
+    n: "06",
+    title: "Bardage",
+    subtitle: "Isolation & finition façade",
+    lead: "Pose de bardage métallique et isolé pour bâtiments agricoles, industriels et tertiaires — étanchéité, esthétique et performance thermique.",
+    bullets: [
+      "Bardage simple peau & double peau isolé",
+      "Étanchéité & isolation thermique",
+      "Finitions sur-mesure",
+    ],
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1600&q=80",
+    accent: "solar",
+  },
+  {
+    id: "construction-metallique",
+    slug: "construction-metallique",
+    n: "07",
+    title: "Construction Métallique",
+    subtitle: "Charpente & structure",
+    lead: "Conception, fabrication et montage de charpentes et structures métalliques pour hangars, entrepôts et bâtiments agricoles ou industriels.",
+    bullets: [
+      "Charpente & ossature métallique",
+      "Hangars, entrepôts, bâtiments agricoles",
+      "Études & plans sur-mesure",
+    ],
+    image: "https://images.unsplash.com/photo-1541971297127-2f0eeb050c0d?auto=format&fit=crop&w=1600&q=80",
+    accent: "emerald",
+  },
 ];
 
 export const MARKETS = [
