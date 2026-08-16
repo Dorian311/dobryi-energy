@@ -26,7 +26,11 @@ export default function Counter({ value = 0, duration = 1600, suffix = "", class
   return (
     <span ref={ref} className={className}>
       {display}
-      {suffix && <span className="ml-1 text-emerald-brand">{suffix}</span>}
+      {suffix && (
+        <span className="ml-2 text-emerald-brand text-[0.4em] align-super font-bold">
+          {suffix}
+        </span>
+      )}
     </span>
   );
 }

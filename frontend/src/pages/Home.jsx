@@ -109,7 +109,7 @@ export default function Home() {
                 — 01 · Chiffres —
               </div>
               <h2 className="text-4xl md:text-6xl lg:text-7xl text-casse font-bold tracking-[-0.03em] leading-[1.02] max-w-4xl mx-auto">
-                Une décennie d'énergie livrée.
+                Deux décennies d'énergie livrée.
               </h2>
             </div>
           </Reveal>
@@ -117,8 +117,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 max-w-5xl mx-auto">
             {[
               { v: 500, s: "+", l: "Installations réalisées" },
-              { v: 15, s: "MW", l: "Puissance en service" },
-              { v: 10, s: "ans", l: "Garantie décennale" },
+              { v: 45, s: "MWc", l: "Puissance en service" },
+              { v: 20, s: "ans", l: "D'expertise terrain" },
             ].map((k, i) => (
               <Reveal key={i} delay={i * 0.08}>
                 <div className="bg-nuit p-10 md:p-14 text-center">
