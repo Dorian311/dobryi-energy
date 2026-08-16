@@ -11,7 +11,7 @@ export const SOLUTIONS = [
       "Matériel Tier 1 · Garantie 10 ans",
       "Dimensionnement & 3D",
     ],
-    image: "https://images.pexels.com/photos/29407508/pexels-photo-29407508.jpeg",
+    image: "https://cdn.pixabay.com/photo/2015/07/27/14/11/solar-power-862602_1280.jpg",
     accent: "emerald",
   },
   {
@@ -26,7 +26,7 @@ export const SOLUTIONS = [
       "Rapport détaillé & photos IR",
       "Levée de réserves",
     ],
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80",
+    image: "https://plus.unsplash.com/premium_photo-1682148026899-d21f17c04e80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     accent: "solar",
   },
   {
@@ -41,7 +41,7 @@ export const SOLUTIONS = [
       "Nettoyage écologique",
       "Contrats annuels",
     ],
-    image: "https://images.pexels.com/photos/8961034/pexels-photo-8961034.jpeg",
+    image: "https://plus.unsplash.com/premium_photo-1682145354957-713207b0387c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     accent: "emerald",
   },
   {
@@ -56,7 +56,7 @@ export const SOLUTIONS = [
       "Aides ADVENIR",
       "Supervision cloud",
     ],
-    image: "https://images.pexels.com/photos/33508509/pexels-photo-33508509.jpeg",
+    image: "https://images.pexels.com/photos/33661086/pexels-photo-33661086.jpeg?_gl=1*16u8ltr*_ga*MzI0MDc1ODEyLjE3ODY4ODM2ODY.*_ga_8JE65Q40S6*czE3ODY4ODM2ODUkbzEkZzEkdDE3ODY4ODU3NTUkajI5JGwwJGgw",
     accent: "solar",
   },
   {
@@ -82,21 +82,21 @@ export const MARKETS = [
     title: "Agricole",
     kicker: "/A",
     lead: "Rentabilisez toitures et hangars. Autoconsommation ou revente, ombrières agrivoltaïques.",
-    image: "https://images.pexels.com/photos/34182412/pexels-photo-34182412.jpeg",
+    image: "https://cdn.pixabay.com/photo/2017/08/21/20/29/solar-2666770_1280.jpg",
   },
   {
     id: "industriel",
     title: "Industriel & Tertiaire",
     kicker: "/B",
     lead: "Décarbonez votre site, sécurisez votre facture énergétique, électrifiez vos flottes.",
-    image: "https://images.pexels.com/photos/34347028/pexels-photo-34347028.jpeg",
+    image: "https://cdn.pixabay.com/photo/2026/06/23/06/18/06-18-49-31_1280.jpg",
   },
   {
     id: "collectivite",
     title: "Collectivités & Public",
     kicker: "/C",
     lead: "Marchés publics, ombrières, bornes IRVE et bâtiments communaux — un partenaire unique.",
-    image: "https://images.pexels.com/photos/9875440/pexels-photo-9875440.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    image: "https://cdn.pixabay.com/photo/2020/02/06/15/11/solar-4824604_1280.jpg",
   },
 ];
 
