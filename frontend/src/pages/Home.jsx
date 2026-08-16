@@ -118,7 +118,7 @@ export default function Home() {
             {[
               { v: 500, s: "+", l: "Installations réalisées" },
               { v: 45, s: "MWc", l: "Puissance en service" },
-              { v: 20, s: "ans", l: "D'expertise terrain" },
+              { v: 10, s: "ans", l: "Garantie décennale" },
             ].map((k, i) => (
               <Reveal key={i} delay={i * 0.08}>
                 <div className="bg-nuit p-10 md:p-14 text-center">
