@@ -33,7 +33,7 @@ export default function Home() {
       >
         <motion.div style={{ y: imgY, scale: imgScale }} className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/29407508/pexels-photo-29407508.jpeg"
+            src="https://plus.unsplash.com/premium_photo-1682148014710-095131cd99a8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Panneaux solaires"
             className="w-full h-full object-cover"
           />
