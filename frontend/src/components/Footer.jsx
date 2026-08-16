@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
+import { Linkedin } from "lucide-react";
+
+const LINKEDIN_URL = "https://www.linkedin.com/in/shaid-dobryiev-36b63236a/recent-activity/all/";
 
 export default function Footer() {
   return (
     <footer className="relative border-t border-white/[0.05] bg-nuit" data-testid="site-footer">
-      <div className="container-x py-14 flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+      <div className="container-x py-14 grid grid-cols-1 md:grid-cols-3 items-center gap-10 md:gap-8">
         <div className="text-center md:text-left">
           <img
             src="/logo/dobryi-energy.png"
             alt="Dobryi Energy"
-            className="h-40 md:h-44 w-auto mb-4 mx-auto md:mx-0"
+            className="h-28 md:h-32 w-auto mb-4 mx-auto md:mx-0"
           />
           <div className="text-sm text-muted2">
             Photovoltaïque · IRVE · Maintenance · Sécurité chantier
@@ -30,7 +33,7 @@ export default function Footer() {
           </Link>
         </nav>
 
-        <div className="text-center md:text-right space-y-1">
+        <div className="text-center md:text-right space-y-2">
           <a
             href="mailto:dobryienergy@gmail.com"
             className="block text-sm text-casse hover:text-cyan-brand transition-colors"
@@ -47,6 +50,18 @@ export default function Footer() {
           </a>
           <div className="text-[11px] font-medium tracking-[0.2em] uppercase text-muted2">
             France entière
+          </div>
+          <div className="flex justify-center md:justify-end pt-1">
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn Dobryi Energy"
+              data-testid="footer-linkedin"
+              className="inline-flex items-center justify-center h-9 w-9 rounded-full border border-white/15 text-casse hover:text-cyan-brand hover:border-cyan-brand transition-colors"
+            >
+              <Linkedin size={16} strokeWidth={2} />
+            </a>
           </div>
         </div>
       </div>
