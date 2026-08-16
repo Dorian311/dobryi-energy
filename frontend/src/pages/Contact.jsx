@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { motion } from "framer-motion";
 import { toast, Toaster } from "sonner";
 import { Check, Mail, MessageCircle, MapPin } from "lucide-react";
 import EchoHeading from "../components/EchoHeading";
 import Reveal from "../components/Reveal";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+// Clé publique Web3Forms — récupérée gratuitement sur https://web3forms.com
+// (aucun compte requis pour la générer, juste ton adresse email de réception)
+const WEB3FORMS_ACCESS_KEY = process.env.REACT_APP_WEB3FORMS_KEY;
 
 const SECTORS = [
   { v: "agricole", label: "Agricole" },
@@ -51,7 +52,24 @@ export default function Contact() {
     }
     setSubmitting(true);
     try {
-      await axios.post(`${API}/devis`, form);
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Nouvelle demande de devis — ${form.name}`,
+          from_name: "Site Dobryi Energy",
+          Nom: form.name,
+          Email: form.email,
+          Téléphone: form.phone || "—",
+          Société: form.company || "—",
+          Secteur: form.sector,
+          "Type de projet": form.project_type,
+          Message: form.message,
+        }),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message || "Envoi impossible");
       setSuccess(true);
       setForm(INITIAL);
       toast.success("Demande envoyée. Nous vous répondons sous 24h ouvrées.");

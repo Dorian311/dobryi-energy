@@ -1,26 +1,16 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import EchoHeading from "../components/EchoHeading";
 import Reveal from "../components/Reveal";
-
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+import realisationsData from "../data/realisations.json";
 
 export default function Realisations() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(realisationsData);
   const [filter, setFilter] = useState("Tous");
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    let mounted = true;
-    axios
-      .get(`${API}/realisations`)
-      .then((r) => mounted && setItems(r.data.items || []))
-      .catch(() => {});
-    return () => {
-      mounted = false;
-    };
   }, []);
 
   const sectors = ["Tous", ...Array.from(new Set(items.map((i) => i.sector)))];

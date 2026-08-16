@@ -8,7 +8,7 @@ export default function Footer() {
           <img
             src="/logo/dobryi-energy.png"
             alt="Dobryi Energy"
-            className="h-16 md:h-20 w-auto mb-4 mx-auto md:mx-0"
+            className="h-20 md:h-24 w-auto mb-4 mx-auto md:mx-0"
           />
           <div className="text-sm text-muted2">
             Photovoltaïque · IRVE · Maintenance · Sécurité chantier

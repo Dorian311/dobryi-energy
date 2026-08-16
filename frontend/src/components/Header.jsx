@@ -38,13 +38,13 @@ export default function Header() {
         }`}
         data-testid="site-header"
       >
-        <div className="container-x h-16 md:h-20 flex items-center justify-between gap-6">
+        <div className="container-x h-20 md:h-24 flex items-center justify-between gap-6">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 shrink-0" data-testid="header-logo">
             <img
               src="/logo/dobryi-energy.png"
               alt="Dobryi Energy"
-              className="h-11 md:h-14 w-auto"
+              className="h-16 md:h-20 w-auto"
             />
           </Link>
 

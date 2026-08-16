@@ -1,0 +1,110 @@
+[
+  {
+    "id": "toiture-agricole-tarn",
+    "title": "Toiture agricole 500 kWc",
+    "location": "Tarn-et-Garonne",
+    "sector": "Agricole",
+    "year": 2024,
+    "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80",
+    "kpi": "500 kWc"
+  },
+  {
+    "id": "ombriere-industrie",
+    "title": "Ombrière parking industriel",
+    "location": "Tarn-et-Garonne",
+    "sector": "Industriel",
+    "year": 2024,
+    "image": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80",
+    "kpi": "1.2 MWc"
+  },
+  {
+    "id": "irve-flotte-tertiaire",
+    "title": "Déploiement IRVE flotte",
+    "location": "Toulouse",
+    "sector": "Tertiaire",
+    "year": 2025,
+    "image": "https://images.pexels.com/photos/33508509/pexels-photo-33508509.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "kpi": "24 bornes"
+  },
+  {
+    "id": "mairie-ombriere",
+    "title": "Ombrière communale",
+    "location": "Lyon",
+    "sector": "Collectivité",
+    "year": 2024,
+    "image": "https://images.pexels.com/photos/9875440/pexels-photo-9875440.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "kpi": "220 kWc"
+  },
+  {
+    "id": "hangar-elevage",
+    "title": "Hangar élevage bovin",
+    "location": "Aveyron",
+    "sector": "Agricole",
+    "year": 2023,
+    "image": "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1600&q=80",
+    "kpi": "310 kWc"
+  },
+  {
+    "id": "filets-securite-chantier",
+    "title": "Sécurisation filets chantier",
+    "location": "Bordeaux",
+    "sector": "Sécurité",
+    "year": 2025,
+    "image": "https://images.pexels.com/photos/8961034/pexels-photo-8961034.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "kpi": "4200 m²"
+  },
+  {
+    "id": "cooperative-agricole-gers",
+    "title": "Coopérative agricole",
+    "location": "Gers",
+    "sector": "Agricole",
+    "year": 2024,
+    "image": "https://images.pexels.com/photos/29407508/pexels-photo-29407508.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "kpi": "780 kWc"
+  },
+  {
+    "id": "supermarche-albi",
+    "title": "Toiture supermarché",
+    "location": "Albi",
+    "sector": "Tertiaire",
+    "year": 2025,
+    "image": "https://images.unsplash.com/photo-1595437193398-f24279553f4f?auto=format&fit=crop&w=1600&q=80",
+    "kpi": "450 kWc"
+  },
+  {
+    "id": "irve-mairie-cahors",
+    "title": "Bornes IRVE parking mairie",
+    "location": "Cahors",
+    "sector": "Collectivité",
+    "year": 2024,
+    "image": "https://images.unsplash.com/photo-1633886038251-4d5a898d5da4?auto=format&fit=crop&w=1600&q=80",
+    "kpi": "8 bornes 22 kW"
+  },
+  {
+    "id": "site-industriel-castres",
+    "title": "Site industriel autoconsommation",
+    "location": "Castres",
+    "sector": "Industriel",
+    "year": 2023,
+    "image": "https://images.pexels.com/photos/34347028/pexels-photo-34347028.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "kpi": "980 kWc"
+  },
+  {
+    "id": "controle-parc-solaire",
+    "title": "Contrôle parc solaire au sol",
+    "location": "Lot-et-Garonne",
+    "sector": "Contrôle",
+    "year": 2025,
+    "image": "https://images.pexels.com/photos/34182412/pexels-photo-34182412.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "kpi": "5 MWc audité"
+  },
+  {
+    "id": "maintenance-flotte-pv",
+    "title": "Contrat maintenance 12 sites",
+    "location": "France entière",
+    "sector": "Maintenance",
+    "year": 2025,
+    "image": "https://images.pexels.com/photos/8961034/pexels-photo-8961034.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "kpi": "12 sites · 3.4 MWc"
+  }
+]
