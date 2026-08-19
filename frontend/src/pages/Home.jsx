@@ -41,17 +41,6 @@ export default function Home() {
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-nuit/80 via-nuit/60 to-nuit" />
         <div className="absolute inset-0 z-10 deep-blue-radial" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.2 }}
-          className="relative z-20 text-center mb-10"
-        >
-          <div className="text-[11px] font-semibold tracking-[0.32em] uppercase prism-gradient-text">
-            Dobryi Energy · Interventions partout en France
-          </div>
-        </motion.div>
-
         <EchoHeading
           before="Photovoltaïque clé en main,"
           echo="votre partenaire de confiance."
@@ -68,6 +57,17 @@ export default function Home() {
           Installation, contrôle, maintenance, IRVE et sécurité chantier.
           Un partenaire certifié QualiPV et RGE Qualibat.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 1.5 }}
+          className="relative z-20 text-center mt-6"
+        >
+          <div className="text-[11px] font-semibold tracking-[0.32em] uppercase prism-gradient-text">
+            Dobryi Energy · Interventions partout en France
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 12 }}
