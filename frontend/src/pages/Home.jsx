@@ -45,7 +45,7 @@ export default function Home() {
           before="Photovoltaïque clé en main,"
           echo="votre partenaire de confiance."
           delay={0.35}
-          className="relative z-20 text-[42px] sm:text-6xl md:text-7xl lg:text-[88px] leading-[1] tracking-[-0.03em] font-bold max-w-6xl"
+          className="relative z-20 text-[32px] sm:text-4xl md:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.03em] font-bold max-w-4xl"
         />
 
         <motion.p
