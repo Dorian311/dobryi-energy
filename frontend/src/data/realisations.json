@@ -1,36 +1,71 @@
 [
   {
-    "id": "Ombrières-photovoltaïques-marseille",
-    "title": "Ombrières photovoltaïques",
-    "location": "Marseille",
-    "sector": "Agricole",
-    "year": 2026,
-    "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80",
+    "id": "ombriere-toulouse",
+    "title": "Ombrière photovoltaïque",
+    "location": "Toulouse",
+    "sector": "Industriel",
+    "year": 2025,
+    "image": "/realisations/toulouse/1787322699279.jpeg",
     "images": [
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1600&q=80"
+      "/realisations/toulouse/1787322699279.jpeg",
+      "/realisations/toulouse/1787322701069.jpeg",
+      "/realisations/toulouse/1787322709007.jpeg",
+      "/realisations/toulouse/1787322709249.jpeg"
     ],
-    "kpi": "500 kWc",
-    "description": "Installation photovoltaïque en toiture sur hangar agricole de grande envergure. Ce projet clé en main comprend la fourniture et la pose de 1 200 panneaux, le raccordement au réseau, ainsi que la mise en service complète. Productivité annuelle estimée à 560 MWh."
+    "kpi": "En cours",
+    "description": "Nouvelle ombrière photovoltaïque en phase finale de réalisation. Dobryi Energy est intervenu sur l'ensemble de la partie électrique : câblage et raccordement des strings, cheminement et tirage des câbles DC, partie électrique DC, tirage et raccordement AC, mise à la terre et finitions électriques. Les modules photovoltaïques avaient été posés en amont par les équipes de charpente. Finalisation de la partie AC en attente de livraison du matériel. Un grand merci à notre client pour sa confiance."
   },
   {
-    "id": "ombriere-industrie",
-    "title": "Ombrière parking industriel",
-    "location": "Tarn-et-Garonne",
+    "id": "ombriere-marseille",
+    "title": "Ombrières photovoltaïques parking",
+    "location": "Marseille",
     "sector": "Industriel",
-    "year": 2024,
-    "image": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80",
+    "year": 2025,
+    "image": "/realisations/marseille/1787160573834.jpeg",
     "images": [
-      "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80"
+      "/realisations/marseille/1787160573834.jpeg",
+      "/realisations/marseille/1787160579917.jpeg",
+      "/realisations/marseille/1787160581311.jpeg",
+      "/realisations/marseille/1787160583142.jpeg",
+      "/realisations/marseille/1787160588304.jpeg"
     ],
-    "kpi": "1.2 MWc",
-    "description": "Construction et installation d'une ombrière photovoltaïque sur parking industriel. La structure couvre 300 places de stationnement et produit 1.2 MWc, permettant à l'entreprise de couvrir 65 % de sa consommation électrique annuelle."
+    "kpi": "80% réalisé",
+    "description": "Chantier d'ombrières photovoltaïques sur parking près de Marseille, réalisé à 80 %. Nos équipes ont avancé sur la partie AC/DC, en attente du passage d'Enedis pour finaliser l'ensemble de l'installation. Un grand merci à nos équipes pour leur travail et leur engagement, ainsi qu'à notre client pour sa confiance."
+  },
+  {
+    "id": "toiture-tarn",
+    "title": "Toiture photovoltaïque 500 kWc",
+    "location": "Tarn",
+    "sector": "Agricole",
+    "year": 2025,
+    "image": "/realisations/tarn/1787159891782.jpeg",
+    "images": [
+      "/realisations/tarn/1787159891782.jpeg",
+      "/realisations/tarn/1787159892984.jpeg",
+      "/realisations/tarn/1787159893291.jpeg",
+      "/realisations/tarn/1787159895722.jpeg"
+    ],
+    "kpi": "500 kWc",
+    "description": "Réalisation complète menée de A à Z par nos équipes : mise en place des filets de sécurité sous-face et périphériques, pose de la couverture, pose des panneaux photovoltaïques, raccordement électrique jusqu'aux onduleurs. Félicitations à toutes nos équipes pour leur travail, leur engagement et leur professionnalisme. Un grand merci à notre client pour sa confiance renouvelée."
+  },
+  {
+    "id": "installation-nailloux",
+    "title": "Installation photovoltaïque mairie",
+    "location": "Nailloux",
+    "sector": "Collectivité",
+    "year": 2025,
+    "image": "/realisations/nailloux/installation-photovoltaique-nailloux.mp4",
+    "images": [
+      "/realisations/nailloux/installation-photovoltaique-nailloux.mp4"
+    ],
+    "kpi": "500+ kWc",
+    "description": "Installation d'un ensemble photovoltaïque de plus de 500 kW pour la mairie de la commune de Nailloux. Un projet ambitieux au service de la transition énergétique locale, alliant performance et engagement durable pour le territoire. Un grand merci à nos équipes pour leur travail professionnel et leur engagement tout au long de ce projet."
   },
   {
     "id": "irve-flotte-tertiaire",
     "title": "Déploiement IRVE flotte",
     "location": "Toulouse",
-    "sector": "Tertiaire",
+    "sector": "IRVE",
     "year": 2025,
     "image": "https://images.pexels.com/photos/33508509/pexels-photo-33508509.jpeg?auto=compress&cs=tinysrgb&w=1600",
     "images": [
@@ -38,32 +73,6 @@
     ],
     "kpi": "24 bornes",
     "description": "Déploiement de 24 bornes de recharge pour véhicules électriques sur le site tertiaire d'un grand compte toulousain. Installation en courant alternatif 22 kW avec système de pilotage intelligent pour optimiser la recharge de la flotte."
-  },
-  {
-    "id": "mairie-ombriere",
-    "title": "Ombrière communale",
-    "location": "Lyon",
-    "sector": "Collectivité",
-    "year": 2024,
-    "image": "https://images.pexels.com/photos/9875440/pexels-photo-9875440.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "images": [
-      "https://images.pexels.com/photos/9875440/pexels-photo-9875440.jpeg?auto=compress&cs=tinysrgb&w=1600"
-    ],
-    "kpi": "220 kWc",
-    "description": "Réalisation d'une ombrière photovoltaïque dans le cadre d'un marché public pour la commune. La structure abrite le stationnement de la mairie et produit une énergie revendue intégralement au réseau, générant des revenus stables sur 20 ans."
-  },
-  {
-    "id": "hangar-elevage",
-    "title": "Hangar élevage bovin",
-    "location": "Aveyron",
-    "sector": "Agricole",
-    "year": 2023,
-    "image": "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1600&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=1600&q=80"
-    ],
-    "kpi": "310 kWc",
-    "description": "Installation de panneaux photovoltaïques sur hangar d'élevage bovin en Aveyron. Projet financé à 100 % par le revenu de vente d'électricité. Mise en service en 8 semaines, avec accompagnement complet des démarches administratives."
   },
   {
     "id": "filets-securite-chantier",
@@ -76,59 +85,7 @@
       "https://images.pexels.com/photos/8961034/pexels-photo-8961034.jpeg?auto=compress&cs=tinysrgb&w=1600"
     ],
     "kpi": "4200 m²",
-    "description": "Pose de filets de sécurité périphériques et sous-face sur un chantier photovoltaïque de grande hauteur à Bordeaux. Intervention réalisée en 3 jours par une équipe certifiée travaux en hauteur, conformément aux normes EN 1263."
-  },
-  {
-    "id": "cooperative-agricole-gers",
-    "title": "Coopérative agricole",
-    "location": "Gers",
-    "sector": "Agricole",
-    "year": 2024,
-    "image": "https://images.pexels.com/photos/29407508/pexels-photo-29407508.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "images": [
-      "https://images.pexels.com/photos/29407508/pexels-photo-29407508.jpeg?auto=compress&cs=tinysrgb&w=1600"
-    ],
-    "kpi": "780 kWc",
-    "description": "Installation solaire sur les toitures de la coopérative agricole du Gers. Ce projet mutualisé entre plusieurs exploitants permet une autoconsommation collective et une réduction significative des charges énergétiques de la coopérative."
-  },
-  {
-    "id": "supermarche-albi",
-    "title": "Toiture supermarché",
-    "location": "Albi",
-    "sector": "Tertiaire",
-    "year": 2025,
-    "image": "https://images.unsplash.com/photo-1595437193398-f24279553f4f?auto=format&fit=crop&w=1600&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1595437193398-f24279553f4f?auto=format&fit=crop&w=1600&q=80"
-    ],
-    "kpi": "450 kWc",
-    "description": "Pose de 1 050 panneaux photovoltaïques sur la toiture d'un supermarché de l'agglomération albigeoise. L'installation couvre 55 % de la consommation du site (éclairage, réfrigération, caisse). Retour sur investissement estimé à 6 ans."
-  },
-  {
-    "id": "irve-mairie-cahors",
-    "title": "Bornes IRVE parking mairie",
-    "location": "Cahors",
-    "sector": "Collectivité",
-    "year": 2024,
-    "image": "https://images.unsplash.com/photo-1633886038251-4d5a898d5da4?auto=format&fit=crop&w=1600&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1633886038251-4d5a898d5da4?auto=format&fit=crop&w=1600&q=80"
-    ],
-    "kpi": "8 bornes 22 kW",
-    "description": "Déploiement de 8 bornes de recharge AC 22 kW sur le parking de la mairie de Cahors, dans le cadre du plan de mobilité durable de la collectivité. Les bornes sont accessibles au public 24h/24 via badge ou application mobile."
-  },
-  {
-    "id": "site-industriel-castres",
-    "title": "Site industriel autoconsommation",
-    "location": "Castres",
-    "sector": "Industriel",
-    "year": 2023,
-    "image": "https://images.pexels.com/photos/34347028/pexels-photo-34347028.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "images": [
-      "https://images.pexels.com/photos/34347028/pexels-photo-34347028.jpeg?auto=compress&cs=tinysrgb&w=1600"
-    ],
-    "kpi": "980 kWc",
-    "description": "Installation solaire sur site industriel en autoconsommation totale. La centrale de 980 kWc alimente directement les lignes de production, réduisant la facture énergétique de 40 %. Un système de supervision en temps réel permet de piloter la production."
+    "description": "Pose de filets de sécurité périphériques et sous-face sur un chantier photovoltaïque de grande hauteur. Intervention réalisée par une équipe certifiée travaux en hauteur, conformément aux normes EN 1263."
   },
   {
     "id": "controle-parc-solaire",
@@ -141,11 +98,11 @@
       "https://images.pexels.com/photos/34182412/pexels-photo-34182412.jpeg?auto=compress&cs=tinysrgb&w=1600"
     ],
     "kpi": "5 MWc audité",
-    "description": "Mission de contrôle et audit technique d'un parc solaire au sol de 5 MWc en Lot-et-Garonne. Inspection thermographique par drone, vérification des connexions DC/AC, contrôle des onduleurs et rédaction d'un rapport complet avec préconisations."
+    "description": "Mission de contrôle et audit technique d'un parc solaire au sol. Inspection thermographique par drone, vérification des connexions DC/AC, contrôle des onduleurs et rédaction d'un rapport complet avec préconisations."
   },
   {
     "id": "maintenance-flotte-pv",
-    "title": "Contrat maintenance 12 sites",
+    "title": "Contrat maintenance multi-sites",
     "location": "France entière",
     "sector": "Maintenance",
     "year": 2025,
