@@ -44,7 +44,7 @@ export default function Header() {
             <img
               src="/logo/dobryi-energy.png"
               alt="Dobryi Energy"
-              className="h-36 w-auto"
+              className="h-20 md:h-36 w-auto"
             />
           </Link>
 
