@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import EchoHeading from "../components/EchoHeading";
 import Reveal from "../components/Reveal";
+import RealisationModal from "../components/RealisationModal";
 import realisationsData from "../data/realisations.json";
 
 export default function Realisations() {
-  const [items, setItems] = useState(realisationsData);
+  const [items] = useState(realisationsData);
   const [filter, setFilter] = useState("Tous");
+  const [selected, setSelected] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,6 +20,8 @@ export default function Realisations() {
 
   return (
     <main className="bg-nuit">
+      {/* Modal */}
+      {selected && <RealisationModal item={selected} onClose={() => setSelected(null)} />}
       {/* Hero */}
       <section
         className="relative min-h-[60vh] flex flex-col items-center justify-center px-6 pt-32 pb-16 overflow-hidden"
@@ -67,7 +71,8 @@ export default function Realisations() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative h-[400px] overflow-hidden rounded-2xl border border-white/10"
+                onClick={() => setSelected(it)}
+                className="group relative h-[400px] overflow-hidden rounded-2xl border border-white/10 cursor-pointer"
                 data-testid={`realisation-${it.id}`}
               >
                 <img
@@ -76,6 +81,12 @@ export default function Realisations() {
                   className="w-full h-full object-cover grayscale-[70%] group-hover:grayscale-0 scale-105 group-hover:scale-110 transition-all duration-[1400ms] ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-nuit via-nuit/40 to-transparent" />
+                {/* Badge "Voir le projet" au hover */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-[11px] font-semibold tracking-[0.2em] uppercase px-4 py-2.5 rounded-full bg-cyan-brand text-nuit">
+                    Voir le projet
+                  </span>
+                </div>
                 <div className="absolute top-4 left-4 text-[10px] font-semibold tracking-[0.3em] uppercase px-3 py-1.5 rounded-full border border-cyan-brand/40 text-cyan-brand backdrop-blur-sm">
                   {it.sector}
                 </div>
