@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container-x py-14 grid grid-cols-1 md:grid-cols-3 items-center gap-10 md:gap-8">
         <div className="text-center md:text-left">
           <img
-            src="/logo/dobryi-energy.png"
+            src="/logo/logo-Dobryi-Energy-removebg-preview-2.png"
             alt="Dobryi Energy"
             className="h-28 md:h-32 w-auto mb-4 mx-auto md:mx-0"
           />
