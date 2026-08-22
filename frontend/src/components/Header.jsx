@@ -42,7 +42,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 shrink-0" data-testid="header-logo">
             <img
-              src="/logo/dobryi-energy.png"
+              src="/logo/logo-Dobryi-Energy-removebg-preview-2.png"
               alt="Dobryi Energy"
               className="h-20 md:h-36 w-auto"
             />
